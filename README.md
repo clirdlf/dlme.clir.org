@@ -11,6 +11,8 @@ archive of this content can be found on
 * Clone the repository
 * Run an http server of your choice in the `docs` directory
 
-  git clone https://github.com/clirdlf/dlme.clir.org.git
-  cd dlme.clir.org/docs
-  php -S localhost:8000
+```
+git clone https://github.com/clirdlf/dlme.clir.org.git
+cd dlme.clir.org/docs
+php -S localhost:8000
+```
