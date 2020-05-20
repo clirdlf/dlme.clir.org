@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 DOMAIN=''
 # https://gist.github.com/jonsuh/3c89c004888dfc7352be
 NOCOLOR='\033[0m'
@@ -19,9 +20,9 @@ LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
 display_usage() {
-  echo "${YELLOW}This script archives websites."
-  echo "\nUsage:\n\t archive.sh [URL]${NOCOLOR}\n"
-  echo "${YELLOW}\nExample: archive.sh ${$1}${GREEN}\n"
+  echo "This script archives websites."
+  echo "${YELLOW}\nUsage:\n\t archive.sh [URL]\n${NOCOLOR}"
+  echo "${GREEN}\nExample: ./archive.sh https://forum2020.diglib.org/${NOCOLOR} \n"
 }
 
 domain_from_url(){
@@ -63,4 +64,6 @@ eval $cmd
 
 mv ${DOMAIN} docs
 
-echo "${GREEN}Finished Archiving $1${NOCOLOR}"
+echo "${GREEN}Finished Archiving $1"
+echo "\n Files are in docs directory."
+echo "\n You can run php -S localhost:8000 in the docs directory to validate the files. ${NOCOLOR}"
